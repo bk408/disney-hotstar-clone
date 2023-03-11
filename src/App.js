@@ -1,10 +1,15 @@
-
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <div>
-      <h2>Hotstar Clone</h2>
+    <div className="App">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+        </Routes>
+      </Router>
     </div>
   );
 }
